@@ -5,7 +5,6 @@ then
     echo usage: rm-watermark-pdf folder pattern
     exit
 fi
-
 source_dir=$1;
 find "$1" -type f -name "*.pdf" -print0|while read -d $'\0' file;
 do
@@ -27,6 +26,7 @@ close($in);
 close($out);
 EOF
 	      )
+	      
 	script=${script/'__PATTERN__'/$2}
 	#echo $script
 	/usr/bin/perl -e "$script"
