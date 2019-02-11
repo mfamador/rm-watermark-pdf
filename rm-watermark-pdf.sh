@@ -26,7 +26,6 @@ close($in);
 close($out);
 EOF
 	      )
-	      
 	script=${script/'__PATTERN__'/$2}
 	#echo $script
 	/usr/bin/perl -e "$script"
